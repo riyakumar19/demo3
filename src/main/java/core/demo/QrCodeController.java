@@ -21,7 +21,7 @@ public class QrCodeController {
     @GetMapping(produces = "image/png")
     public byte[] generateQRCode(@RequestParam String email) throws WriterException, IOException {
         // The link that will be shown when the QR is scanned
-        String qrText = "https://demo3-production-9e7e.up.railway.app/scan?email" + email;
+        String qrText = "https://demo3-production-9e7e.up.railway.app/scan?email=" + email;
         int width = 250;
         int height = 250;
 
